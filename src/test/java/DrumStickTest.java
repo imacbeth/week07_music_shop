@@ -1,4 +1,5 @@
 import Shop.DrumSticks;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,6 +17,15 @@ public class DrumStickTest {
     @Test
     public void hasMake() {
         assertEquals("Pearl", drumSticks.getMake());
+    }
 
+    @Test
+    public void hasBuyPrice() {
+        assertEquals(5.00, drumSticks.getBuyPrice());
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        Assert.assertEquals(3.50, drumSticks.calculateMarkUp(), 0.01);
     }
 }

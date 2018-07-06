@@ -1,5 +1,6 @@
 import Shop.Guitar;
 import Shop.InstrumentType;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(125, 215, InstrumentType.STRING, 6, "Fender" );
+        guitar = new Guitar(125.00, 215.00, InstrumentType.STRING, 6, "Fender" );
     }
 
     @Test
@@ -34,4 +35,8 @@ public class GuitarTest {
         assertEquals("playing guitar solo", guitar.play());
     }
 
+    @Test
+    public void canCalculateMarkup() {
+        Assert.assertEquals(90.00, guitar.calculateMarkUp(), 0.01);
+    }
 }

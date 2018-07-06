@@ -34,4 +34,8 @@ public class KeyboardTest {
         assertEquals("plink plonk", keyboard.play());
     }
 
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(100.00, keyboard.calculateMarkUp(), 0.01);
+    }
 }

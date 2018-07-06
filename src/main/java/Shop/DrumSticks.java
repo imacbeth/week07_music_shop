@@ -27,5 +27,8 @@ public class DrumSticks extends StockItem {
         this.type = type;
     }
 
-
+    @Override
+    public double calculateMarkUp() {
+        return super.calculateMarkUp();
+    }
 }
