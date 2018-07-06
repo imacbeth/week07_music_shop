@@ -1,7 +1,7 @@
+import Shop.Guitar;
+import Shop.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
-
-import javax.print.DocFlavor;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(InstrumentType.STRING, 6, "Fender" );
+        guitar = new Guitar(125, 215, InstrumentType.STRING, 6, "Fender" );
     }
 
     @Test
