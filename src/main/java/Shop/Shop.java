@@ -43,5 +43,12 @@ public class Shop {
         till += stockItem.getSellPrice();
     }
 
+    public double calculateTotalPotentialProfit(){
+        double potentialProfit = 0;
+        for (StockItem stockItem : stock){
+            potentialProfit += stockItem.calculateMarkUp();
+        }
+        return potentialProfit;
+    }
 
 }
