@@ -24,4 +24,15 @@ public class GuitarTest {
         assertEquals(6, guitar.getNumberOfStrings());
     }
 
+    @Test
+    public void hasMake(){
+        assertEquals("Fender", guitar.getMake());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("playing guitar solo", guitar.play());
+
+    }
+
 }
