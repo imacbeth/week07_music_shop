@@ -6,4 +6,9 @@ public abstract class Instrument implements IPlay {
         this.instrumentType = instrumentType;
     }
 
+    public abstract String play();
+
+    public InstrumentType getInstrumentType() {
+        return instrumentType;
+    }
 }
