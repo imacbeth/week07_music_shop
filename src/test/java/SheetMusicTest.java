@@ -1,4 +1,3 @@
-import Shop.DrumSticks;
 import Shop.SheetMusic;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,12 +11,12 @@ public class SheetMusicTest {
 
     @Before
     public void setUp() {
-        sheetMusic = new SheetMusic(5, 8.50, "Pearl");
+        sheetMusic = new SheetMusic(5, 9.99, "Classical");
     }
 
     @Test
     public void hasGenre() {
-        assertEquals("Pearl", sheetMusic.getGenre());
+        assertEquals("Classical", sheetMusic.getGenre());
     }
 
     @Test
@@ -27,6 +26,12 @@ public class SheetMusicTest {
 
     @Test
     public void canCalculateMarkup() {
-        Assert.assertEquals(3.50, sheetMusic.calculateMarkUp(), 0.01);
+        Assert.assertEquals(4.99, sheetMusic.calculateMarkUp(), 0.01);
+    }
+
+    @Test
+    public void canSetSellPrice(){
+        sheetMusic.setSellPrice(10.50);
+        assertEquals(10.50, sheetMusic.getSellPrice(), 0.01);
     }
 }

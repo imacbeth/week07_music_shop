@@ -46,6 +46,7 @@ public class ShopTest {
         assertEquals(0.00, shop.getTill(), 0.01);
     }
 
+
     @Test
     public void canAddStock(){
         shop.addStock(guitar);
