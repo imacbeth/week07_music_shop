@@ -32,7 +32,6 @@ public class GuitarTest {
     @Test
     public void canPlay(){
         assertEquals("playing guitar solo", guitar.play());
-
     }
 
 }
